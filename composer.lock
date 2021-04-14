@@ -1,0 +1,96 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "924289ad861e7a6501553f6766cf6aad",
+    "packages": [
+        {
+            "name": "nemundo/core",
+            "version": "0.60",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nemundo/core.git",
+                "reference": "f476c5b1837f164be661ac1de29409fee5b5dafa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nemundo/core/zipball/f476c5b1837f164be661ac1de29409fee5b5dafa",
+                "reference": "f476c5b1837f164be661ac1de29409fee5b5dafa",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Nemundo\\Core\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Urs Lang",
+                    "email": "urs.lang@gmail.com"
+                }
+            ],
+            "description": "Core",
+            "support": {
+                "issues": "https://github.com/nemundo/core/issues",
+                "source": "https://github.com/nemundo/core/tree/0.60"
+            },
+            "time": "2021-04-12T17:57:16+00:00"
+        },
+        {
+            "name": "nemundo/html",
+            "version": "0.54",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nemundo/html.git",
+                "reference": "a84d33fd235b1c67d23d3a83cf3295420ebbba0e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nemundo/html/zipball/a84d33fd235b1c67d23d3a83cf3295420ebbba0e",
+                "reference": "a84d33fd235b1c67d23d3a83cf3295420ebbba0e",
+                "shasum": ""
+            },
+            "require": {
+                "nemundo/core": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Nemundo\\Html\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nemundo",
+                    "email": "urs.lang@gmail.com"
+                }
+            ],
+            "description": "Html Generator",
+            "support": {
+                "issues": "https://github.com/nemundo/html/issues",
+                "source": "https://github.com/nemundo/html/tree/0.54"
+            },
+            "time": "2021-04-10T07:25:40+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}
