@@ -9,6 +9,7 @@ use Nemundo\Geo\Kml\Container\Placemark;
 use Nemundo\Geo\Kml\Element\Point;
 use Nemundo\Geo\Kml\Property\HtmlDescription;
 use Nemundo\Geo\Kml\Property\Name;
+use Nemundo\Geo\Kml\Property\StyleUrl;
 use Nemundo\Html\Character\HtmlCharacter;
 
 
@@ -30,9 +31,18 @@ class KmlMarker extends Placemark
      */
     public $coordinate;
 
+    public $styleUrl;
+
 
     public function getContent()
     {
+
+        //<styleUrl>#exampleStyleMap</styleUrl>
+        if ($this->styleUrl!==null) {
+            $styleUrl = new StyleUrl($this);
+            $styleUrl->value='#'.$this->styleUrl;
+        }
+
 
         if ($this->description !== null) {
             $description = new HtmlDescription($this);
@@ -58,6 +68,7 @@ class KmlMarker extends Placemark
 
     /*
 <Placemark>
+     <styleUrl>#exampleStyleMap</styleUrl>
 <name>Ein Punkt im Nichts</name>
 <description>
 <![CDATA[

@@ -18,6 +18,12 @@ $placemark->label = 'Kml Placemaker';
 $placemark->description = 'Description';
 $placemark->coordinate = $geoCoordinate;
 
+$style=new \Nemundo\Geo\Kml\Style\IconStyle($placemark);
+$style->iconUrl='icon.png';
+
+
+
+
 /*
 $geoCoordinate = new \Nemundo\Core\Type\Geo\GeoCoordinate();
 $geoCoordinate->longitude = 10;
