@@ -7,3 +7,12 @@ composer require nemundo/kml
 ```
 
 
+
+### config.php
+```
+$lib = new Library($autoload);
+$lib->source = __DIR__ . '/kml/src/';
+$lib->namespace = 'Nemundo\\Geo\\Kml';
+```
+
+
