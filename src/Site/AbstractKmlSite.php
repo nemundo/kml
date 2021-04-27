@@ -15,6 +15,11 @@ abstract class AbstractKmlSite extends AbstractIconSite
         $this->title='Kml';
         $this->url='kml';
         parent::__construct($site);
+
+        if ($this->icon->icon == null) {
+            $this->icon->icon = 'globe';
+        }
+
     }
 
 

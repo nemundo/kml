@@ -3,6 +3,8 @@
 namespace Nemundo\Geo\Kml\Element;
 
 
+use Nemundo\Core\Type\Geo\AbstractGeoCoordinate;
+use Nemundo\Core\Type\Geo\AbstractGeoCoordinateAltitude;
 use Nemundo\Core\Type\Geo\GeoCoordinateAltitude;
 use Nemundo\Geo\Kml\Property\AltitudeMode\AltitudeMode;
 use Nemundo\Geo\Kml\Property\AltitudeMode\AltitudeModeProperty;
@@ -31,11 +33,13 @@ abstract class AbstractLineElement extends AbstractTagContainer
 
 
 
-    public function addPoint(GeoCoordinateAltitude $coordinate)
+    //public function addPoint(GeoCoordinateAltitude $coordinate)
+public function addPoint(AbstractGeoCoordinateAltitude $coordinate)
     {
 
         $longitude = round($coordinate->longitude, 5);
         $latitude = round($coordinate->latitude, 5);
+        //$this->coordinateText .= $longitude . ',' . $latitude . PHP_EOL;
         $this->coordinateText .= $longitude . ',' . $latitude . ',' . $coordinate->altitude . PHP_EOL;
 
         return $this;

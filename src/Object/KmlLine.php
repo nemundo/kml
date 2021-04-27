@@ -3,6 +3,7 @@
 namespace Nemundo\Geo\Kml\Object;
 
 
+use Nemundo\Core\Type\Geo\AbstractGeoCoordinate;
 use Nemundo\Core\Type\Geo\GeoCoordinateAltitude;
 use Nemundo\Geo\Kml\Container\Placemark;
 use Nemundo\Geo\Kml\Element\LineString;
@@ -28,9 +29,14 @@ class KmlLine extends Placemark  // AbstractKmlElement
     public $color;
 
     /**
+     * @var string
+     */
+    public $altitudeMode;
+
+    /**
      * @var LineString
      */
-    private $lineString;
+    private $lineString= AltitudeMode::CLAMP_TO_GROUND;
 
 
     protected function loadContainer()
@@ -38,12 +44,13 @@ class KmlLine extends Placemark  // AbstractKmlElement
 
         parent::loadContainer();
         $this->lineString = new LineString($this);
-        $this->lineString->altitudeMode = AltitudeMode::CLAMP_TO_GROUND;
+        //$this->lineString->altitudeMode = AltitudeMode::CLAMP_TO_GROUND;
 
     }
 
 
-    public function addPoint(GeoCoordinateAltitude $coordinate)
+    //public function addPoint(GeoCoordinateAltitude $coordinate)
+    public function addPoint(AbstractGeoCoordinate $coordinate)
     {
 
         $this->lineString->addPoint($coordinate);
@@ -68,6 +75,8 @@ class KmlLine extends Placemark  // AbstractKmlElement
             $width = new Width($lineStyle);
             $width->value = $this->width;
         }
+
+        $this->lineString->altitudeMode=$this->altitudeMode;
 
         return parent::getContent();
 
