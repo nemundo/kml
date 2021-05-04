@@ -3,9 +3,7 @@
 namespace Nemundo\Geo\Kml\Element;
 
 
-use Nemundo\Core\Type\Geo\AbstractGeoCoordinate;
 use Nemundo\Core\Type\Geo\AbstractGeoCoordinateAltitude;
-use Nemundo\Core\Type\Geo\GeoCoordinateAltitude;
 use Nemundo\Geo\Kml\Property\AltitudeMode\AltitudeMode;
 use Nemundo\Geo\Kml\Property\AltitudeMode\AltitudeModeProperty;
 use Nemundo\Geo\Kml\Property\Extrude;
@@ -30,11 +28,8 @@ abstract class AbstractLineElement extends AbstractTagContainer
     public $coordinateText = '';
 
 
-
-
-
     //public function addPoint(GeoCoordinateAltitude $coordinate)
-public function addPoint(AbstractGeoCoordinateAltitude $coordinate)
+    public function addPoint(AbstractGeoCoordinateAltitude $coordinate)
     {
 
         $longitude = round($coordinate->longitude, 5);
@@ -47,7 +42,8 @@ public function addPoint(AbstractGeoCoordinateAltitude $coordinate)
     }
 
 
-    public function getCoordinateContent() {
+    public function getCoordinateContent()
+    {
 
         return $this->coordinateText;
 
@@ -60,7 +56,7 @@ public function addPoint(AbstractGeoCoordinateAltitude $coordinate)
         //$this->tagName = 'LineString';
 
         $tag = new AltitudeModeProperty($this);
-        $tag->value =$this->altitudeMode;
+        $tag->value = $this->altitudeMode;
 
         if ($this->extrude) {
             $tag = new Extrude($this);
@@ -68,8 +64,8 @@ public function addPoint(AbstractGeoCoordinateAltitude $coordinate)
         }
 
 
-       $tag=  new Tessellate($this);
-        $tag->value='1';
+        $tag = new Tessellate($this);
+        $tag->value = '1';
 
         //  <tessellate>1</tessellate>
 

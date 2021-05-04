@@ -49,8 +49,10 @@ class KmlMarker extends Placemark
             $description->value = $this->description;
         }
 
+        if ($this->coordinate!==null) {
         $point = new Point($this);
         $point->coordinate = $this->coordinate;
+        }
 
         return parent::getContent();
 
