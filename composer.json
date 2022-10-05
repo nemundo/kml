@@ -1,12 +1,1 @@
-{
-    "name": "nemundo/kml",
-    "autoload": {
-        "psr-4": {
-            "Nemundo\\Geo\\Kml\\": "src/"
-        }
-    },
-    "require": {
-        "nemundo/core": "*",
-        "nemundo/html": "*"
-    }
-}
+{    "name": "nemundo/kml",    "autoload": {        "psr-4": {            "Nemundo\\Geo\\Kml\\": "src/"        }    },    "require": {        "nemundo/core": "*",        "nemundo/html": "*"    }}

@@ -1,9 +1,1 @@
-<?php
-
-namespace Nemundo\Geo\Kml\View;
-
-
-class Region
-{
-
-}
+<?phpnamespace Nemundo\Geo\Kml\View;class Region{}

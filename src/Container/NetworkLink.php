@@ -1,9 +1,1 @@
-<?php
-
-namespace Nemundo\Geo\Kml\Container;
-
-
-class NetworkLink
-{
-
-}
+<?phpnamespace Nemundo\Geo\Kml\Container;class NetworkLink{}
