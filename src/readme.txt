@@ -1,1 +1,0 @@
-entfernen aus FrameworkKmlIconSiteRepo KmlNemundo/Geo/Kml
